@@ -1,5 +1,5 @@
 import numpy
-from zad1.Values import *
+from  Values import *
 
 
 class SGDsolver:
@@ -11,8 +11,8 @@ class SGDsolver:
 
     def changeradstartingpoints(self):
         values = numpy.random.uniform(-1,1,(1,2))
-        self.starting_point_x = values[0,0]
-        self.starting_point_y = values[0,1]
+        self.starting_point_x = 10 
+        self.starting_point_y = 10
 
     def print_self_values(self):
         print(f"{self.starting_point_x},{self.starting_point_y},{self.wk}")
@@ -137,6 +137,8 @@ def main():
     print("\n")
     print(f"{sgd.starting_point_x} - starting x ")
     print(f"{sgd.starting_point_y}  - starting y\n")
+
+    '''
     
     w_k_1 = sgd.GD_minimum(10000,0.0001)
     x = w_k_1[0]
@@ -156,7 +158,7 @@ def main():
     maximum = Values.functionoftwo(x,y)
     print(f"{maximum} - maximum \n")
 
-
+    '''
     w_k_4 = sgd.RealSGDMinimum(10000,0.0001,20)
     x = w_k_4[0]
     y= w_k_4[1]
@@ -165,6 +167,7 @@ def main():
     realminimum= Values.functionoftwo(x,y)
     print(f"{realminimum} - realminimum \n")
     
+    '''
 
     w_k_3 = sgd.RealSGDMaximum(10000,0.0001,20)
     x = w_k_3[0]
@@ -173,7 +176,7 @@ def main():
     print(f"{y} - maximum real y ")
     realmaximum= Values.functionoftwo(x,y)
     print(f"{realmaximum} - realmaximum \n")
-
+    '''
     
     
 
